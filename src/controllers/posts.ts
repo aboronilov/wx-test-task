@@ -17,6 +17,9 @@ cloudinary.config({
 export const createPost = async(req: CustomRequest, res: express.Response) => {
     try {
         const {title, content, photo} = req.body;
+        if (!title || !content) {
+            return res.status(400).json({msg: "Please provide title and content"})
+        }
         const user = await User.findById(req.userId);
         const photoUrl = photo ? await cloudinary.uploader.upload(photo) : null;
 

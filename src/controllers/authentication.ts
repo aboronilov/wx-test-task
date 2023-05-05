@@ -9,8 +9,8 @@ import { CustomRequest } from "../types";
 export const register = async (req: express.Request, res: express.Response) => {
     try {
         const {username, password, avatar, email} = req.body;
-        if (!email || !password) {
-            return res.status(400).json({msg: "Please provide email and password"});
+        if (!email || !password || !username) {
+            return res.status(400).json({msg: "Please provide username, email and password"});
         }
         if (!EmailValidator.validate(email)) {
             return res.status(400).json({msg: "Please provide the valid email"});
