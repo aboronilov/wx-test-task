@@ -1,0 +1,31 @@
+// {
+//   "compilerOptions": {
+//      "module": "ESNext",
+//      "moduleResolution": "node",
+//      "baseUrl": "src",
+//      "outDir": "dist",
+//      "sourceMap": true,
+//      "noImplicitAny": true,
+//      "allowSyntheticDefaultImports": true,
+//      "noEmit": true,
+//      "allowImportingTsExtensions": true,
+//   },
+//   "ts-node": {
+//     "esm": true
+//   },
+//   "include": ["src/**/*"]
+// }
+
+{
+  "compilerOptions": {
+     "module": "NodeNext",
+     "moduleResolution": "node",
+     "baseUrl": "src",
+     "outDir": "dist",
+     "sourceMap": true,
+     "noImplicitAny": true,
+    //  "esModuleInterop":true
+     
+  },
+  "include": ["src/**/*"]
+}
